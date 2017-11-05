@@ -1,0 +1,18 @@
+angular.module("alcResource",[]) 
+    .controller('mainController',function($scope){
+    $scope.count=0;
+})
+    .controller("formController",function($scope){
+    $scope.count=0;
+    $scope.createTodo=function()
+    {       
+        if($scope.user>0)
+        {
+            $scope.user=true;
+        }
+        else
+        {
+            $scope.user=false;
+        }
+    }
+})

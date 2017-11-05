@@ -1,0 +1,76 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="alcResource">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>ALC School Resource</title>
+
+	<!-- SCROLLS -->
+	<!-- css files -->
+<link href="style.css" type="text/css" rel="stylesheet" media="all">
+	<link href="//fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext" rel="stylesheet">
+
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<style>
+		html 					{ overflow-y:scroll; }
+		body 					{ padding-top:50px; }
+		#todo-list 				{ margin-bottom:30px; }
+		#todo-form 	 			{ margin-bottom:50px; }
+	</style>
+
+	<!-- SPELLS -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
+    <script src="js/controllers/main.js"></script>          <!-- load up our controller -->    
+	<script src="js/services/alcResource.js"></script>		    <!-- load our alc resource service -->
+	<script src="js/core.js"></script>						    <!-- load our main application -->
+	
+	<!-- <script type="text/javascript" src="./node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="./node_modules/angular-background-img/angular-background-img.min.js"></script> -->
+	
+
+   
+      
+
+</head>
+<!-- SET THE CONTROLLER -->
+<body ng-controller="mainController">
+	<div class="container">
+
+		<!-- HEADER AND TODO COUNT -->
+		<div class="background-txt">
+			<h1>Hi Andela!!!</h1>
+
+			<h2>I tried my best on this application, and this is the best i could come up with during the time frame. You can test the apis using postman, although the ui is in a  really big mess, which i really hope to learn.
+				 I would really love it if i am chosen because, i am a teachable lady with very big dreams but dont have enough knowledge to fulfil such dreams. I am a beginner in programming,
+				 and started my programming journey about 3 months back, thought i had enough knowledge until 2 weeks back when i picked up this project.
+				 Would really love that you put me into consideration... THANKS!!!	
+				 </h2>
+		</div>
+		
+		<!-- createToDo() WILL CREATE NEW TODOS -->
+
+
+		<div>
+			<button ng-click="createTodo()">AddUser</button>    
+			<form ng-model="frm" ng-hide="user" class="form-inline editable-wrap editable-text ng-scope ng-pristine" role="form">
+				<label>Name: <input type="text" ng-model="user.name"/></label><br />
+				<label>Course: <input type="text" ng-model="user.course"/></label><br />
+				<label>Department: <input type="text" ng-model="user.department"/></label><br />
+				<label>Registration number: <input type="text" ng-model="user.reg_number"/></label><br />
+				<label>Duration: <input type="text" ng-model="user.duration"/></label><br />
+				
+				<button type="submit">Ok</button>
+			</form> 
+		  </div>
+		  
+        
+		
+	</div>
+
+</body>
+</html>
